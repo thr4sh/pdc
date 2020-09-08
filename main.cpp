@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     unique_ptr<Duck> t(new MallardDuck());
 
     t->display();
+    t->swim();
 
     return a.exec();
 }
