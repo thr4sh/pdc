@@ -11,6 +11,5 @@ int main(int argc, char *argv[])
 
     t->display();
     t->swim();
-
     return a.exec();
 }
