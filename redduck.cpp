@@ -1,9 +1,19 @@
 #include "redduck.h"
 
-Redduck::Redduck()
+Redduck::Redduck() : flb(new FlyWithWings), qkb(new Quack)
 {
 
 }
+
+void Redduck::quack()
+{
+    qkb->quack();
+}
+void Redduck::fly()
+{
+    flb->fly();
+}
+
 
 void Redduck::display()
 {
