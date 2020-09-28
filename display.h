@@ -2,6 +2,11 @@
 #define DISPLAY_H
 
 
+//QT trash
+#include <QWidget>
+#include <QLCDNumber>
+#include <QLabel>
+
 class Display
 {
 public:

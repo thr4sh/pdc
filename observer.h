@@ -13,6 +13,12 @@ private:
 public:
     using sub_t = C;
     friend Subject<C>;
+    Observer()
+    {
+
+
+    }
+    Observer(const Observer&) = default;
     virtual ~Observer(){}
     void virtual update(const sub_t &)= 0;
 };

@@ -1,4 +1,4 @@
-#include <QCoreApplication>
+#include <QApplication>
 
 #include "decoyduck.h"
 
@@ -12,7 +12,7 @@
 #include <utility>
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+    QApplication a(argc, argv);
 
     unique_ptr<Duck> t(new DecoyDuck());
 
@@ -27,14 +27,15 @@ int main(int argc, char *argv[])
     p->fight();
 
     shared_ptr<WeatherData> wd(new WeatherData());
-    shared_ptr<CurCondsDisplay> ccd(new CurCondsDisplay(wd));
+    //shared_ptr<CurCondsDisplay> ccd(new CurCondsDisplay(wd));
     shared_ptr<StatDisplay> st(new StatDisplay());
 
     wd->registerObserver(st);
-    wd->registerObserver(ccd);
+    //wd->registerObserver(ccd);
 
     wd->setMeasures(882.f, 100.f, 1337.f);
 
-    wd->removeObserver(ccd);
+    //wd->removeObserver(ccd);
+    wd->removeObserver(st);
     return a.exec();
 }
